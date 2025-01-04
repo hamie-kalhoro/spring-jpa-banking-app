@@ -8,5 +8,5 @@ import lombok.Data;
 public class AccountDto {
     private int id;
     private String accountHolderName;
-    private Long balance;
+    private double balance;
 }
