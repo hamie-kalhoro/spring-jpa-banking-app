@@ -4,6 +4,5 @@ import net.worth.banking_app.dto.AccountDto;
 
 public interface AccountService {
 
-    public AccountDto createAccount(AccountDto accountDto);
-
+    AccountDto createAccount(AccountDto accountDto);
 }
