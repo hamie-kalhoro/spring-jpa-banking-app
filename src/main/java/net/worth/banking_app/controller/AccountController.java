@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.Map;
 
 @RestController
@@ -35,6 +34,14 @@ public class AccountController {
                                                     @RequestBody Map<String, Double> request) {
         Double amount = request.get("amount");
         AccountDto accountDto = accountService.deposite(id, amount);
+        return new ResponseEntity<>(accountDto, HttpStatus.OK);
+    }
+
+    @PutMapping("with-draw/{id}")
+    public ResponseEntity<AccountDto> withDrawAmount(@PathVariable Long id,
+                                                     @RequestBody Map<String, Double> request) {
+        Double amount = request.get("amount");
+        AccountDto accountDto = accountService.withdraw(id, amount);
         return new ResponseEntity<>(accountDto, HttpStatus.OK);
     }
 }
