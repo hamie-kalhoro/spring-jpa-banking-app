@@ -29,6 +29,11 @@ public class AccountController {
         return new ResponseEntity<>(accountById, HttpStatus.OK);
     }
 
+    @GetMapping("get-all-accounts")
+    public ResponseEntity<?> getAllAccounts() {
+        return new ResponseEntity<>(accountService.getAllAccounts(), HttpStatus.OK);
+    }
+
     @PutMapping("deposite/{id}")
     public ResponseEntity<AccountDto> depositeAmout(@PathVariable Long id,
                                                     @RequestBody Map<String, Double> request) {
