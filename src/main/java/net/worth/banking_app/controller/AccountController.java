@@ -49,4 +49,10 @@ public class AccountController {
         AccountDto accountDto = accountService.withdraw(id, amount);
         return new ResponseEntity<>(accountDto, HttpStatus.OK);
     }
+
+    @DeleteMapping("delete-account/{id}")
+    public ResponseEntity<?> deleteAccount(@PathVariable long id) {
+        accountService.deleteAccount(id);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }

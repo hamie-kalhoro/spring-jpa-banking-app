@@ -7,9 +7,8 @@ import net.worth.banking_app.repository.AccountRepository;
 import net.worth.banking_app.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Optional;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -65,5 +64,15 @@ public class AccountServiceImpl implements AccountService {
         List<Account> accounts = accountRepository.findAll();
         return accounts.stream().map(AccountMapper::mapToAccountDto)
                 .toList();
+    }
+
+    @Override
+    public void deleteAccount(Long id) {
+        Optional<Account> byId = accountRepository.findById(id);
+        if(byId.isPresent()) {
+            accountRepository.delete(byId.get());
+        } else {
+            throw new RuntimeException("Account not found");
+        }
     }
 }
