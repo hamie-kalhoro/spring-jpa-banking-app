@@ -1,5 +1,12 @@
 package net.worth.banking_app.dto;
 
-public class AccountDto {
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
+@Data
+@AllArgsConstructor
+public class AccountDto {
+    private int id;
+    private String accountHolderName;
+    private Long balance;
 }
