@@ -1,9 +1,9 @@
-🏦 Spring JPA Banking Application<br>
+**🏦 Spring JPA Banking Application**<br>
 A simple yet functional Banking Application built using Spring Boot, Spring Data JPA, and H2 Database, demonstrating essential banking operations such as account creation, balance inquiry, deposits, withdrawals, and fund transfers.
 
 ---
 
-🚀 Features<br>
+**🚀 Features**<br>
 Create a new bank account
 
 Deposit money into an account
@@ -24,7 +24,7 @@ JPA/Hibernate for ORM with auto schema generation
 
 ---
 
-🛠️ Technologies Used<br>
+**🛠️ Technologies Used**<br>
 Java 17+
 
 Spring Boot
@@ -39,7 +39,7 @@ Maven
 
 ---
 
-📂 Project Structure<br>
+**📂 Project Structure**<br>
 graphql
 Copy
 Edit
@@ -54,7 +54,7 @@ spring-jpa-banking-app/
 
 ---
 
-🧪 Running the App<br>
+**🧪 Running the App**<br>
 ✅ Prerequisites
 Java 17+
 
@@ -62,7 +62,7 @@ Maven
 
 ---
 
-🏃‍♂️ Steps to Run<br>
+**🏃‍♂️ Steps to Run**<br>
 Clone the repository:
 
 bash
@@ -84,7 +84,7 @@ JDBC URL: jdbc:h2:mem:testdb
 
 ---
 
-📬 API Endpoints<br>
+**📬 API Endpoints**<br>
 Method	Endpoint	Description
 POST	/api/accounts	Create a new account
 GET	/api/accounts/{id}	Get account details
@@ -95,14 +95,14 @@ POST	/api/accounts/transfer	Transfer funds between accounts
 
 ---
 
-🔐 Error Handling<br>
+**🔐 Error Handling**<br>
 Custom exceptions for common errors (e.g., insufficient balance, invalid account)
 
 Global exception handler returns meaningful error messages with HTTP status codes
 
 ---
 
-📸 Example Request<br>
+**📸 Example Request**<br>
 Transfer Funds:
 
 json
@@ -118,16 +118,16 @@ POST /api/accounts/transfer
 
 ---
 
-🤝 Contributing<br>
+**🤝 Contributing**<br>
 Contributions are welcome! If you'd like to improve something, feel free to fork this repo, make changes, and submit a pull request.
 
 ---
 
-📄 License<br>
+**📄 License**<br>
 This project is open source and available.
 
 ---
 
-👨‍💻 Author<br>
+**👨‍💻 Author**<br>
 Hamie Kalhoro
 🔗 GitHub Profile
